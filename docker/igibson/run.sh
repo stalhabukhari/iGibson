@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # For docker
-docker run --gpus all -ti --rm igibson/igibson:latest
+docker run --gpus all -ti --rm igibson-cuda-devel
 
 # Or if your cluster uses podman
 # podman run --rm -it --net=host \

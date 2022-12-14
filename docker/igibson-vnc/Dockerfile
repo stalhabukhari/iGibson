@@ -1,8 +1,8 @@
-FROM igibson/igibson:latest
+FROM igibson-cuda-devel:latest
 
 # add dummy display and remote GUI via x11VNC
 
-RUN DEBIAN_FRONTEND=noninteractive apt install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt install -y \
     xserver-xorg-video-dummy \
     xfce4 desktop-base \
     x11vnc net-tools

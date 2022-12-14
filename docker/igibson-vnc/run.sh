@@ -31,4 +31,6 @@ done
 
 echo Starting VNC server on port $VNC_PORT with password $VNC_PASSWORD
 echo please run \"python -m igibson.examples.environments.env_nonint_example\" once you see the docker command prompt:
-docker run --gpus all -ti -p $VNC_PORT:5900 -e VNC_PASSWORD=$VNC_PASSWORD --rm igibson/igibson-vnc:latest bash
+volume_path="/media/talha/"
+docker run -it --rm --gpus all -p $VNC_PORT:5900 -e VNC_PASSWORD=$VNC_PASSWORD -v $volume_path:$volume_path \
+  igibson-vnc-cuda-devel bash

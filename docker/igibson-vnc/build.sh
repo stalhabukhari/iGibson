@@ -1,5 +1,5 @@
 #!/bin/bash
 
-IMAGE=igibson/igibson-vnc
+IMAGE=igibson-vnc-cuda-devel
 
-docker build -t $IMAGE
+docker build -t $IMAGE .

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE=igibson/igibson
+IMAGE=igibson-cuda-devel
 
 docker build -t $IMAGE .
 
